@@ -1,9 +1,11 @@
-from rest_framework.views import APIView
-from rest_framework.response import Response
+from rest_framework import viewsets
+
+from .serializers import TableSerializer
+from  ..models import Table
 
 
-class TestAPIView(APIView):
+class TableViewSet(viewsets.ModelViewSet):
 
-    def get(self, request, *args, **kwargs):
-        data = [{'id': 1, 'name': 'John'}, {'id': 2, 'name': 'Lee'}]
-        return Response(data)
+    queryset = Table.objects.all()
+    serializer_class = TableSerializer
+

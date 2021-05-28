@@ -1,8 +1,9 @@
-from django.urls import path
+from rest_framework import routers
+from .views import TableViewSet
 
-from .views import TestAPIView
+router = routers.SimpleRouter()
+router.register(prefix='table', viewset=TableViewSet, basename='table')
 
 
-urlpatterns = [
-    path('test-api/', TestAPIView.as_view(), name = 'test')
-]
+urlpatterns = []
+urlpatterns += router.urls
