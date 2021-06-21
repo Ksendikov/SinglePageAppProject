@@ -17,7 +17,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'mainspa'
+    'mainspa',
+    'django_filters',
 ]
 
 MIDDLEWARE = [
@@ -95,3 +96,9 @@ STATIC_ROOT = BASE_DIR / 'static'
 STATICFILES_DIRS = (
     (BASE_DIR / 'mainapp-ui/build/static'),
 )
+
+REST_FRAMEWORKS = {
+    'DEFAULT_FILTER_BACKENDS':(
+        'django_filters.rest_framework.DjangoFilterBackend',
+    )
+}
