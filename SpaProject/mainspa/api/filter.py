@@ -3,6 +3,7 @@ from ..models import Table
 
 
 class TableFilter(django_filters.FilterSet):
+
     name = django_filters.CharFilter(field_name='name', lookup_expr='exact')
 
     quantity = django_filters.NumberFilter()

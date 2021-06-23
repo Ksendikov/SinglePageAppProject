@@ -1,19 +1,36 @@
 import React, {useState, useEffect} from 'react';
-import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import axios from 'axios';
+import Data from './components/Data';
+import OnLoadingData from './components/LoadingData'
 
-function App() {
+
+function RetrievingTableData() {
+  const DataLoading = OnLoadingData(Data)
+
+  const [tableData, setTableData] = useState([{
+    loading: false,
+    fields: null,
+  }])
+
+  useEffect(() => {
+    setTableData({loading:true})
+
+    const apiUrl = 'http://127.0.0.1:8000/api/table/'
+
+    axios.get(apiUrl).then((resp) => {
+      const allData = resp.data
+      setTableData({
+        loading: false,
+        fields: allData
+      })
+    })
+  }, [setTableData])
+  
   return (
     <div className="App">
-
-        <table class="table table-bordered border-primary">
-            ...
-        </table>
-
-      <h1>Hellow</h1>
-
+      <DataLoading isLoading={tableData.loading} fields={tableData.fields}/>
     </div>
   );
 }
 
-export default App;
+export default RetrievingTableData;
