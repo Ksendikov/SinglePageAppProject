@@ -1,7 +1,6 @@
 function Data(props) {
 
     const { fields } = props
-    // console.log(props)
     console.log(fields)
     if (!fields || fields.length === 0) return <p>Нет данных.</p>
     
@@ -30,15 +29,7 @@ function Data(props) {
                     }
                 </tbody>
             </table>
-      <div>
-          <span>1</span>
-          <span>2</span>
-          <span>3</span>
-          <span>4</span>
-          <span>5</span>
       </div>
-      </div>
-      
     )
 }
 

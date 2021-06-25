@@ -32,6 +32,8 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+SpaProject_venv
+SpaProject_venv/
 
 *.egg-info
 *.pot
@@ -56,7 +58,7 @@ scripts/flow/*/.flowconfig
 .grunt
 _SpecRunner.html
 __benchmarks__
-build/
+
 build2/
 remote-repo/
 coverage/
