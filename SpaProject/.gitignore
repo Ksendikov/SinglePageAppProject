@@ -3,6 +3,7 @@
 
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 .env
+SpaProject_venv
 # dependencies
 /media/node_modules
 /.pnp
@@ -72,7 +73,6 @@ chrome-user-data
 *.sublime-workspace
 .idea
 *.iml
-.vscode
 *.swp
 *.swo
 

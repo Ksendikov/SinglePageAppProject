@@ -5,6 +5,8 @@
       <sourceFolder url="file://$MODULE_DIR$/SpaProject/SpaProject/mainapp-ui/src" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/Welbex_venv" />
       <excludeFolder url="file://$MODULE_DIR$/SpaProject_venv" />
+      <excludeFolder url="file://$MODULE_DIR$/SpaProject/config/.vscode" />
+      <excludeFolder url="file://$MODULE_DIR$/SpaProject/media/node_modules" />
     </content>
     <orderEntry type="jdk" jdkName="Python 3.8 (WelbeXProject)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
